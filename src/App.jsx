@@ -3,6 +3,7 @@ import './App.css'
 import Counter from './Counter'
 import ScoreKeeper from './ScoreKeeper';
 import EmojiClicker from './EmojiClicker';
+import ScoreKeep from './ScoreKeep';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     {/* <h1>State-demo</h1> */}
       {/* <Counter /> */}
       {/* <ScoreKeeper/> */}
-      <EmojiClicker/>
+      {/* <EmojiClicker/> */}
+      <ScoreKeep numPlayers={5} target={3}/>
       </>
   )
 }
