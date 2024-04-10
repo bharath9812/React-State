@@ -18,6 +18,20 @@ export default function EmojiClicker() {
         // })
         setEmoji(prevEmoji => prevEmoji.filter((e) => e.id !== id))
     }
+    const makeidentical = () => {
+        setEmoji(prevEmoji => {
+            return prevEmoji.map(e => ({
+                ...e,
+                sym: "🫡"
+            })); 
+
+            // or
+            
+            // return prevEmoji.map(e => {
+            //     return { ...e, sym: "🫡" };
+            // })
+        })
+    }
     return (
         <div>
             {emoji.map((e) => (
@@ -31,6 +45,7 @@ export default function EmojiClicker() {
             ))}
 
             <button onClick={addEmoji} >+</button>
+            <button onClick={makeidentical} >make_every_identical</button>
         </div>
     )
 }
